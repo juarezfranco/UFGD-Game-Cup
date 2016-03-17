@@ -47,7 +47,7 @@ if(!empty($erros)){
 }
 
 //delay para teste
-sleep(6);
+sleep(3);
 
 //ENVIA RESPOSTA
 echo json_encode($retorno);
