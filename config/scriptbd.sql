@@ -7,16 +7,15 @@ CREATE TABLE usuarios(
 	id integer auto_increment primary key,
 	nome varchar(100) not null,
 	email varchar(100) not null,
-	fone varchar(100) not null,
-	fone2 varchar(100),
-	cpf varchar(11) not null,
-	data_cadastro timestamp
+	fone varchar(25) not null,
+	fone2 varchar(25),
+	cpf varchar(15) not null,
+	data_cadastro timestamp default CURRENT_TIMESTAMP
 );
-
 CREATE TABLE equipes(
 	id integer auto_increment primary key,
 	nome varchar(100) not null,
-	data_cadastro timestamp
+	data_cadastro timestamp default CURRENT_TIMESTAMP
 );
 
 CREATE TABLE usuario_da_equipe(

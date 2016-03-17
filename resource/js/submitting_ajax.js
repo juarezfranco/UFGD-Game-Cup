@@ -34,7 +34,8 @@ $(document).ready(function() {
 			if(data['success']){
 				//fecha modal de cadastro
 				$('#modal_cadopcao1').modal('hide');
-
+				$('#alertfail1').addClass('fade');//esconde mensagem de falha caso ela esteja aberta
+				
 				//limpa campos
 				$('input[name=nome]').val('');
 				$('input[name=email]').val('');
@@ -43,6 +44,8 @@ $(document).ready(function() {
 
 				//exibe mensagem de sucesso
 				$('#alertsuccess').modal('show');
+				
+				
 
 			}else{
 				//prepara mensagem de erro
