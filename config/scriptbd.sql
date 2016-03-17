@@ -10,12 +10,19 @@ CREATE TABLE usuarios(
 	fone varchar(25) not null,
 	fone2 varchar(25),
 	cpf varchar(15) not null,
-	data_cadastro timestamp default CURRENT_TIMESTAMP
+	data_cadastro timestamp default CURRENT_TIMESTAMP,
+
+	pago boolean default false,
+	data_pagamento timestamp
 );
+
 CREATE TABLE equipes(
 	id integer auto_increment primary key,
 	nome varchar(100) not null,
-	data_cadastro timestamp default CURRENT_TIMESTAMP
+	data_cadastro timestamp default CURRENT_TIMESTAMP,
+
+	pago boolean default false,
+	data_pagamento timestamp	
 );
 
 CREATE TABLE usuario_da_equipe(
