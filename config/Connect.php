@@ -2,26 +2,32 @@
 
 class Connect{
 
-	public static function getConnection(){
-	//le arquivo de configuração do banco de dados
-		$databasejson = file_get_contents('config/database.json');
-	//decodifica conteudo do arquivo
-		if($databasejson)
-			$database = json_decode($databasejson);
-		else
-			$database = json_decode(self::default_config());
+	private static $conn;
 
-		
-		$conn = new PDO( 
-			'mysql:host='.$database->address.
-			';port='.$database->port.
-			';dbname='.$database->db.
-			';charset=utf8',
-			$database->user,
-			$database->passwd
-			);
-		
-		return $conn;
+	/**
+	*	Padrão singleton
+	*/
+	public static function getConnection(){
+		if(self::$conn==null){
+			//le arquivo de configuração do banco de dados
+			$databasejson = file_get_contents('config/database.json');
+			//decodifica conteudo do arquivo
+			if($databasejson)
+				$database = json_decode($databasejson);
+			else
+				$database = json_decode(self::default_config());
+
+			
+			self::$conn = new PDO( 
+				'mysql:host='.$database->address.
+				';port='.$database->port.
+				';dbname='.$database->db.
+				';charset=utf8',
+				$database->user,
+				$database->passwd
+				);
+		}		
+		return self::$conn;
 	}
 
 	/**

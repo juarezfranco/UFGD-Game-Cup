@@ -2,6 +2,9 @@
 include 'model/Usuario.php';
 /**
 * CADATRA NAS PALESTRAS 
+*
+* ATUALIZAR: O PAPEL DESTE ARQUIVO DEVE SER TRASNFERIDO PARA O CONTROLLER, PARA ISSO
+*			 DEVE SER IMPLEMENTADO SISTEMA DE ROTAS.
 **/
 
 
@@ -37,9 +40,10 @@ if(!empty($erros)){
 	//SALVA DADOS NO BANCO 
 	$usuario = new Usuario($_POST);
 	$retorno = $usuario->salvar();
-	
-	//GERAR PDF DO FORMULARIOO
-	//...
+	if($retorno['success']){
+		//GERAR PDF DO FORMULARIOO
+		//...
+	}
 }
 
 //delay para teste

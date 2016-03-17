@@ -18,6 +18,7 @@ class Usuario extends Model{
 		if(!is_array($array))
 			return;
 
+		//magica do php 
 		foreach($array as $key => $value){
 			$this->$key = $value;
 		}
@@ -43,7 +44,7 @@ class Usuario extends Model{
 			if($stmt->execute($params))
 				return self::sucesso();
 			else
-				return self::falha('Não foi possível cadastrar Usuario');
+				return self::falha('Não foi possível efetuar cadastro');
 		}catch(PDOException $e){
 			return self::falha($e);
 		}
