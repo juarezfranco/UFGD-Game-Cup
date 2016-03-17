@@ -1,5 +1,8 @@
 <?php 
+include_once 'Model.php';
 
-class Usuario{
+class Usuario extends Model{
+
+	
 	
 }
