@@ -33,6 +33,7 @@ for($i=0; $i<5 ;$i++){
 	if(empty($_POST['fone'+$i]))
 	$erros['fone'+$i]='FONE participante '+$i+' inválido.';
 }
+
 //PREPARA RESPOSTA
 if(!empty($erros)){
 	$retorno['success'] =false;

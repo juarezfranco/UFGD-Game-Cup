@@ -4,6 +4,7 @@ include_once 'Model.php';
 define('TABLE_NAME','usuarios');
 class Usuario extends Model{
 
+	private $id;
 	private $nome;
 	private $email;
 	private $fone;
@@ -41,8 +42,10 @@ class Usuario extends Model{
 		try{
 			$stmt = $this->conn->prepare($sql);
 
-			if($stmt->execute($params))
+			if($stmt->execute($params)){
+				$this->id = $this->conn->lastInsertId();
 				return self::sucesso();
+			}
 			else
 				return self::falha('Não foi possível efetuar cadastro');
 		}catch(PDOException $e){

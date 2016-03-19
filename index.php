@@ -107,7 +107,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Apresentação</h2>
                 <div id="content-video">
-                <!--iframe do video é adicionado após pagina inteira ser carregada, ele tem um consumo de 500kb X(-->
+                    <!--iframe do video é adicionado após pagina inteira ser carregada, ele tem um consumo de 500kb X(-->
                 </div>
             </div>
         </div>
@@ -170,16 +170,7 @@
             </div>
         </div>
     </section>
-
-    <!-- mapa -->
-    <!--
-    <div id="map">
-        
-        <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2612.1763798516936!2d-54.93165914257094!3d-22.19544474605655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x4a73b8f7660f5f81!2sUFGD+-+Universidade+Federal+da+Grande+Dourados+(Unidade+II)!5e0!3m2!1spt-BR!2sbr!4v1457225158489" width="85%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </center>
-        
-    </div>
-    -->
+    
     <!-- Footer -->
     <footer>
         <div class="container text-center">
@@ -190,22 +181,12 @@
     <div class="modal fade" id="alertsuccess" role="dialog">
         <!--<div class="modal-dialog modal-sm">-->
         <div class="modal-dialog  modal-sm">
-            <div class="alert alert-success in">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <strong>Tudo certo!</strong> O cadastro foi efetuado com sucesso.
+            <div id="alertsuccess-content" class="alert alert-success in">
+
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="alertfail" role="dialog">
-        <!--<div class="modal-dialog modal-sm">-->
-        <div class="modal-dialog  modal-sm">
-            <div class="alert alert-success in">
-                <a href="#" class="close" data-dismiss="modal">&times;</a>
-                <strong>Tudo certo!</strong> O cadastro foi efetuado com sucesso.
-            </div>
-        </div>
-    </div>
 
     <!-- jQuery -->
     <script src="resource/js/jquery.js"></script>
@@ -223,7 +204,7 @@
     <script src="resource/js/jquery.maskedinput.js" type="text/javascript"></script>
 
     <!-- Meus scripts-->
-    <script src="resource/js/submitting_ajax.js" type="text/javascript"></script>
+    <script src="resource/js/cadastrar_opcao1_ajax.js" type="text/javascript"></script>
 
     <!-- Scripts personalizados  -->
     <script type="text/javascript">
@@ -238,7 +219,7 @@
             //adiciona iframe do video
             $('#content-video').html(
                 '<iframe width="100%" height="350" src="https://www.youtube.com/embed/ABL_pZ0gYRE" frameborder="0" allowfullscreen></iframe>'
-            );
+                );
         });
         
     </script>

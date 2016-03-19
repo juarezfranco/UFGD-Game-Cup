@@ -1,5 +1,8 @@
 <?php
-include 'model/Usuario.php';
+include_once 'model/Usuario.php';
+
+include_once 'lib/JasperPHP/JasperPHP.php';
+
 /**
 * CADATRA NAS PALESTRAS 
 *
@@ -41,13 +44,36 @@ if(!empty($erros)){
 	$usuario = new Usuario($_POST);
 	$retorno = $usuario->salvar();
 	if($retorno['success']){
-		//GERAR PDF DO FORMULARIOO
-		//...
+		
+		//gera pdf
+		$data = getdate();
+		$params = array(
+			'id_inscricao'=>$usuario->id,
+			'nome'=>$usuario->nome,
+			'cpf' =>$usuario->cpf,
+			'email' =>$usuario->email,
+			'fone' =>$usuario->fone,
+			'data_inscricao' => $data['mday'].'/'.$data['mon'].'/'.$data['year']
+			);
+
+		$input 	= __DIR__.'/resource/reports/FormularioOpcao1.jasper';
+		$output =   __DIR__.'/resource/reports/gerados/'.$usuario->id;
+		$jasper = new JasperPHP();
+
+		$jasper->process(
+			$input, 
+			$output, 
+			array("pdf"), 
+			$params
+		)->execute();
+		$retorno['idpdf']=$usuario->id;
+		
 	}
 }
 
 //delay para teste
-sleep(3);
+//sleep(0);
 
 //ENVIA RESPOSTA
 echo json_encode($retorno);
+

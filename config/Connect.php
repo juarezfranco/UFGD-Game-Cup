@@ -10,12 +10,15 @@ class Connect{
 	public static function getConnection(){
 		if(self::$conn==null){
 			//le arquivo de configuração do banco de dados
-			$databasejson = file_get_contents('config/database.json');
+			$file = __DIR__.'/database.json';
 			//decodifica conteudo do arquivo
-			if($databasejson)
-				$database = json_decode($databasejson);
-			else
+			if(file_exists($file)){
+				$filecontents = file_get_contents($file);
+				$database = json_decode($filecontents);
+			}else{
 				$database = json_decode(self::default_config());
+				echo "erro";
+			}
 
 			
 			self::$conn = new PDO( 
@@ -25,7 +28,7 @@ class Connect{
 				';charset=utf8',
 				$database->user,
 				$database->passwd
-				);
+			);	
 		}		
 		return self::$conn;
 	}
