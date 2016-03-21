@@ -146,12 +146,14 @@
                 </div>
                 <!-- Botões para se inscrever -->
                 <div class="row">
+                <!-- DESCOMENTAR APENAS QUANDO LIBERAR INSCRIÇÃO
                     <div class="col-lg-5 margin-bottom">
                         <button type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao1">Cadastrar 1ª opção</button>
                     </div>
                     <div class="col-lg-5 margin-bottom">
                         <button id="btn-cad2"type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao2">Cadastrar 2ª opção</button>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
@@ -241,8 +243,8 @@
 
     <?php 
         //inclui formulários de cadastro
-    include 'view/form_cadopcao1.html';
-    include 'view/form_cadopcao2.php';
+    //include 'view/form_cadopcao1.html';
+    //include 'view/form_cadopcao2.php';
     include 'view/modal_loading.html';
     ?>
 </body>
