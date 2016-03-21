@@ -95,8 +95,7 @@
         <div class="row">
             <h2>O evento</h2>
             <div class="col-lg-8 col-lg-offset-2">
-                <p>O jogo mais popular do mundo, o Counter-Strike, é um remake do FPS shooter mais famoso do mundo.O destaque de Counter-Strike Online fica por conta dos diversos modos de jogo que incluem a participação de zumbis. Neles, sua missão é enfrentar hordas enormes de mortos-vivos com a ajuda de poderosas armas de fogo. No entanto, também é possível jogar pelo outro lado e encarnar uma terrível criatura devoradora de homens.</p>
-                <p>falta conteudo sobre o evento</p>
+                <p>O evento tem como objetivo despertar nos acadêmicos e demais participantes o interesse pelas diversas formas de se empreender no mundo corporativo, dentre elas se destaca o setor de jogos eletrônicos para o público jovem, sendo assim, proporcionará a oportunidade de alunos e demais membros da comunidade a participarem de palestras relacionadas ao setor de jogos e casos de empreendedores de sucesso.</p>
             </div>
         </div>
     </section>
@@ -119,8 +118,8 @@
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
                     <h2>Regras</h2>
-                    <p>aqui as regras do evento</p>
-                    <a href="#" class="btn btn-default btn-lg">baixar pdf</a>
+                    <p>em breve ...</p>
+                    <!--<a href="#" class="btn btn-default btn-lg">baixar pdf</a>-->
                 </div>
             </div>
         </div>
@@ -130,6 +129,7 @@
     <section id="inscricao" class="container content-section text-center">
         <div class="row">
             <h2>Inscrição</h2>
+            <i> em breve será aberta ...</i>
             <div class="col-lg-10 col-lg-offset-2">
 
                 <div class="row">
@@ -142,13 +142,16 @@
                         <p>Além de participar das palestras estará também participando do campeonato de CS GO.</p>
                     </div>
                 </div>
+                <!-- Botões para se inscrever -->
                 <div class="row">
+                    <!--
                     <div class="col-lg-5 margin-bottom">
                         <button type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao1">Cadastrar 1ª opção</button>
                     </div>
                     <div class="col-lg-5 margin-bottom">
                         <button id="btn-cad2"type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao2">Cadastrar 2ª opção</button>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
@@ -160,7 +163,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contato</h2>
                 <p>Quaisquer dúvidas, nos procure nas redes sociais ou email, estaremos a disposição para esclarece-las</p>
-                <p><a href="mailto:email@email.com">feedback@email.com</a>
+                <p><a href="mailto:email@email.com">ufgdgamecup@gmail.com</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
@@ -175,6 +178,7 @@
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; ufgd game cup</p>
+            <p class="text-muted credit">Site desenvolvido por Juarez A. Franco Jr</p>
         </div>
     </footer>
 
@@ -236,8 +240,8 @@
 
     <?php 
         //inclui formulários de cadastro
-    include 'view/form_cadopcao1.html';
-    include 'view/form_cadopcao2.php';
+    //include 'view/form_cadopcao1.html';
+    //include 'view/form_cadopcao2.php';
     include 'view/modal_loading.html';
     ?>
 </body>
