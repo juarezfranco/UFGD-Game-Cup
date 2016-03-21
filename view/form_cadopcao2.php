@@ -77,7 +77,7 @@
   </div>
 
   <script type="text/javascript">
-
+  /* preenche todos os campos com valores randomicos para teste
     $(document).ready(function() {
       for(var i =0; i<5; i++){
         $('#nome'+i).val('nome '+i);
@@ -86,4 +86,5 @@
         $('#cpf'+i).val('000.255.255-00');
       }
     });
+*/
   </script>
