@@ -29,6 +29,7 @@ class Connect{
 				$database->user,
 				$database->passwd
 			);	
+			self::$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}		
 		return self::$conn;
 	}

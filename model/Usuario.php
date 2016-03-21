@@ -1,24 +1,34 @@
 <?php 
 include_once 'Model.php';
 
-define('TABLE_NAME','usuarios');
-class Usuario extends Model{
 
+class Usuario extends Model{
+	const TABLE_NAME = 'usuarios';
 	private $id;
 	private $nome;
 	private $email;
 	private $fone;
 	private $cpf;
 
-	/**
-	* Constrói objeto apartir de um array
-	*/
-	public function __construct($array){
+	private $equipe;
+	private $lider;
+	private $data_cadastro;
+
+
+	
+	public function __construct($array = array()){
 		parent::__construct();
 
 		if(!is_array($array))
 			return;
 
+		$this->arrayToUsuario($array);
+	}
+
+	/**
+	* Constrói objeto apartir de um array
+	*/
+	public function arrayToUsuario($array = array()){
 		//magica do php 
 		foreach($array as $key => $value){
 			$this->$key = $value;
@@ -29,14 +39,16 @@ class Usuario extends Model{
 	* Salva no bd
 	*/
 	public function salvar(){
-		$sql = 'insert into '.TABLE_NAME.' (nome,email,fone,cpf) values ( :nome, :email, :fone, :cpf)';
+		$sql = 'insert into '.self::TABLE_NAME.' (nome,email,fone,cpf,equipe,lider) values ( :nome, :email, :fone, :cpf,:equipe,:lider)';
 
 		$params = array(
-			':nome'	=>$this->nome,
-			':email'=>$this->email,
-			':fone'	=>$this->fone,
-			':cpf'	=>$this->cpf
-			);
+			':nome'		=>$this->nome,
+			':email'	=>$this->email,
+			':fone'		=>$this->fone,
+			':cpf'		=>$this->cpf,
+			':equipe'	=>$this->equipe->id,
+			':lider'	=>$this->lider
+		);
 
 
 		try{
@@ -55,6 +67,16 @@ class Usuario extends Model{
 
 	}
 
+	public function read(){
+		$sql = 'SELECT * FROM '.self::TABLE_NAME.' WHERE id=:id';
+
+		$query=$this->conn->prepare($sql);
+		if($query->execute(array(':id'=>$this->id))){
+			$row = $query->fetch(PDO::FETCH_ASSOC);
+			//convert array para Usuario
+			$this->arrayToUsuario($row);
+		}
+	}
 	public function __set($atrib, $value){
 		$this->$atrib = $value;
 	}

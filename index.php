@@ -147,7 +147,7 @@
                         <button type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao1">Cadastrar 1ª opção</button>
                     </div>
                     <div class="col-lg-5 margin-bottom">
-                        <button type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#alertsuccess">Cadastrar 2ª opção</button>
+                        <button id="btn-cad2"type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao2">Cadastrar 2ª opção</button>
                     </div>
                 </div>
             </div>
@@ -178,10 +178,19 @@
         </div>
     </footer>
 
+    <!-- alertas -->
     <div class="modal fade" id="alertsuccess" role="dialog">
         <!--<div class="modal-dialog modal-sm">-->
         <div class="modal-dialog  modal-sm">
             <div id="alertsuccess-content" class="alert alert-success in">
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="alertfail" role="dialog">
+        <!--<div class="modal-dialog modal-sm">-->
+        <div class="modal-dialog  modal-sm">
+            <div id="alertfail-content" class="alert alert-danger in">
 
             </div>
         </div>
@@ -205,6 +214,7 @@
 
     <!-- Meus scripts-->
     <script src="resource/js/cadastrar_opcao1_ajax.js" type="text/javascript"></script>
+    <script src="resource/js/cadastrar_opcao2_ajax.js" type="text/javascript"></script>
 
     <!-- Scripts personalizados  -->
     <script type="text/javascript">
@@ -227,7 +237,7 @@
     <?php 
         //inclui formulários de cadastro
     include 'view/form_cadopcao1.html';
-    include 'view/form_cadopcao2.html';
+    include 'view/form_cadopcao2.php';
     include 'view/modal_loading.html';
     ?>
 </body>

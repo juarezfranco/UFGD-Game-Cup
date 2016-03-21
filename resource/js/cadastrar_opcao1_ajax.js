@@ -46,7 +46,7 @@ $(document).ready(function() {
 				
 				//prepara link para baixar pdf
 				var pdf_link = window.location.protocol + "//" + window.location.host + "/";
-				pdf_link+= 'getpdf.php?pdf='+data['idpdf'];
+				pdf_link+= 'genpdf.php?pdf='+data['idpdf'];
 				var btnclose='<a href="#" class="close" data-dismiss="modal">&times;</a>';
 				var message ='<strong>Tudo certo!</strong> O cadastro foi efetuado com sucesso.';
                 var btnpdf  ='<a href="'+pdf_link+'" class="btn btn-success">Baixar Formulário</a>';
