@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f671270f-e770-4f03-ae96-bb91caf57150">
 	<property name="ireport.zoom" value="1.1000000000000005"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="20"/>
+	<property name="ireport.y" value="0"/>
 	<style name="table">
 		<box>
 			<pen lineWidth="1.0" lineColor="#000000"/>
@@ -156,14 +156,14 @@
 				<reportElement x="32" y="376" width="152" height="27" uuid="43b673f1-3657-4519-bcd2-c4f1066cbe15"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="32" y="211" width="491" height="20" uuid="9a573af6-b739-4a1e-af4b-951fd9fd1b03"/>
+				<reportElement x="32" y="198" width="491" height="20" uuid="9a573af6-b739-4a1e-af4b-951fd9fd1b03"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Participação nas palestras e no Campeonato de CS: GO]]></text>
+				<text><![CDATA[Participação nas palestras e no campeonato de CS: GO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="32" y="233" width="491" height="18" uuid="a3bfd042-8599-468a-b17d-daa3517bf865"/>
+				<reportElement x="32" y="239" width="491" height="18" uuid="a3bfd042-8599-468a-b17d-daa3517bf865"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
@@ -579,18 +579,32 @@
 				<textFieldExpression><![CDATA[$P{email1}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="32" y="525" width="491" height="20" uuid="a3b617f0-b703-460e-91e8-1d94c004fce9"/>
+				<reportElement x="32" y="519" width="491" height="20" uuid="a3b617f0-b703-460e-91e8-1d94c004fce9"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Participação nas palestras e no Campeonato de CS: GO]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="32" y="547" width="491" height="18" uuid="868974c2-5d6a-47d5-b9ad-1b674803b612"/>
+				<reportElement x="32" y="559" width="491" height="18" uuid="868974c2-5d6a-47d5-b9ad-1b674803b612"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Valor: R$ 100,00 ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="218" width="491" height="20" uuid="568ed6e8-70e2-46cb-af65-3ee0d5f13bb1"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dias 19 e 20 de abril de 2016]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="32" y="539" width="491" height="20" uuid="b6a01e8d-5840-4bcf-8899-7888d2a5578f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dias 19 e 20 de abril de 2016]]></text>
 			</staticText>
 		</band>
 	</detail>

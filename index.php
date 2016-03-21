@@ -106,7 +106,9 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Apresentação</h2>
                 <div id="content-video">
-                    <!--iframe do video é adicionado após pagina inteira ser carregada, ele tem um consumo de 500kb X(-->
+                    <a href="https://www.youtube.com/watch?v=ABL_pZ0gYRE" target="_blank"><img src="resource/img/video.jpg"></a></a>
+                    <!--iframe do video é adicionado após pagina inteira ser carregada, ele tem um consumo de 500kb X(,
+                    UPDATE: o iframe não é mais adicionado, direitos autorais do video nao deixar assistir pelo site-->
                 </div>
             </div>
         </div>
@@ -144,14 +146,12 @@
                 </div>
                 <!-- Botões para se inscrever -->
                 <div class="row">
-                    <!--
                     <div class="col-lg-5 margin-bottom">
                         <button type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao1">Cadastrar 1ª opção</button>
                     </div>
                     <div class="col-lg-5 margin-bottom">
                         <button id="btn-cad2"type="button" class="btn btn-default btn-lg" href="#" data-toggle="modal" data-target="#modal_cadopcao2">Cadastrar 2ª opção</button>
                     </div>
-                    -->
                 </div>
             </div>
         </div>
@@ -230,18 +230,19 @@
 
         //executa após pagina ser carregada
         $(window).load(function(){
-            //adiciona iframe do video
-            $('#content-video').html(
+            //adiciona iframe do video, esta comentado, pois não pode mais pra assistir o video no site, direitos autorais nao permite
+            //foi criado um link para assistir no youtube
+            /*$('#content-video').html(
                 '<iframe width="100%" height="350" src="https://www.youtube.com/embed/ABL_pZ0gYRE" frameborder="0" allowfullscreen></iframe>'
-                );
+                );*/
         });
         
     </script>
 
     <?php 
         //inclui formulários de cadastro
-    //include 'view/form_cadopcao1.html';
-    //include 'view/form_cadopcao2.php';
+    include 'view/form_cadopcao1.html';
+    include 'view/form_cadopcao2.php';
     include 'view/modal_loading.html';
     ?>
 </body>
