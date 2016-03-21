@@ -106,7 +106,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Apresentação</h2>
                 <div id="content-video">
-                    <a href="https://www.youtube.com/watch?v=ABL_pZ0gYRE" target="_blank"><img src="resource/img/video.jpg"></a></a>
+                    <a href="https://www.youtube.com/watch?v=ABL_pZ0gYRE" target="_blank"><img width="100%"  src="resource/img/video.jpg"></a></a>
                     <!--iframe do video é adicionado após pagina inteira ser carregada, ele tem um consumo de 500kb X(,
                     UPDATE: o iframe não é mais adicionado, direitos autorais do video nao deixar assistir pelo site-->
                 </div>
