@@ -25,7 +25,7 @@ function encrypt($msg){
 	if(file_exists($file_path))
 		$key = file_get_contents($file_path);
 	else
-		$key ="4edfff7fa3ae8655";
+		$key ="4edfff7fa3ae8655";//default
 
 	$aes = new AES($key);
 

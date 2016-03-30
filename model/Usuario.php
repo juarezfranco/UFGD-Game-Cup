@@ -19,10 +19,8 @@ class Usuario extends Model{
 	public function __construct($array = array()){
 		parent::__construct();
 
-		if(!is_array($array))
-			return;
-		if(count($array)>0)
-			$this->arrayToUsuario($array);
+		
+		$this->arrayToUsuario($array);
 	}
 
 	/**

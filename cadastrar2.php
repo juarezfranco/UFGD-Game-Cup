@@ -58,7 +58,7 @@ if(!empty($erros)){
 	$retorno = $equipe->salvar();
 	//se salvou equipe prepara resposta
 	if($retorno['success']){
-		$retorno['idpdf']='equipe_'.decrypt($equipe->id);
+		$retorno['idpdf']='equipe_'.encrypt($equipe->id);
 	}
 
 }
