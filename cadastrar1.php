@@ -1,7 +1,6 @@
 <?php
 include_once 'model/Usuario.php';
-
-include_once 'lib/JasperPHP/JasperPHP.php';
+include_once 'lib/utils.php';
 
 /**
 * CADATRA NAS PALESTRAS 
@@ -44,7 +43,7 @@ if(!empty($erros)){
 	$usuario = new Usuario($_POST);
 	$retorno = $usuario->salvar();
 	if($retorno['success']){
-		$retorno['idpdf']='usuario_'.$usuario->id;
+		$retorno['idpdf']='usuario_'.encrypt($usuario->id);//criptografa id
 	}
 }
 

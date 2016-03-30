@@ -66,6 +66,12 @@
 
             <?php } ?>
           </div>
+          <div class="row">
+            <div class="col-md-6">
+              <p style="color: yellow; font-size: 14px;">LEIA: Para confirmar a participação no evendo, você deve levar o formulário que será gerado para o
+              professor responsável assinar.</p>
+            </div>
+          </div>
         </div>
 
         <div class="modal-footer">

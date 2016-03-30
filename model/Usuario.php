@@ -21,8 +21,8 @@ class Usuario extends Model{
 
 		if(!is_array($array))
 			return;
-
-		$this->arrayToUsuario($array);
+		if(count($array)>0)
+			$this->arrayToUsuario($array);
 	}
 
 	/**

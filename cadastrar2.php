@@ -1,5 +1,6 @@
 <?php
 include 'model/Equipe.php';
+include_once 'lib/utils.php';
 /**
 * CADATRA ESQUIPES PARA PALESTRAS E CAMPEONATO 
 *
@@ -57,7 +58,7 @@ if(!empty($erros)){
 	$retorno = $equipe->salvar();
 	//se salvou equipe prepara resposta
 	if($retorno['success']){
-		$retorno['idpdf']='equipe_'.$equipe->id;
+		$retorno['idpdf']='equipe_'.decrypt($equipe->id);
 	}
 
 }
