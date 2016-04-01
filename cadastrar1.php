@@ -28,8 +28,11 @@ if(empty($_POST['nome']))
 if(empty($_POST['email']))
 	$erros['email']='email inválido.';
 
-if(empty($_POST['cpf']))
+//trata cpf
+if(empty($_POST['cpf'])){
+
 	$erros['cpf']='cpf inválido.';
+}
 
 if(empty($_POST['fone']))
 	$erros['fone']='Fone inválido.';
@@ -41,9 +44,14 @@ if(!empty($erros)){
 }else{
 	//SALVA DADOS NO BANCO 
 	$usuario = new Usuario($_POST);
-	$retorno = $usuario->salvar();
-	if($retorno['success']){
-		$retorno['idpdf']='usuario_'.encrypt($usuario->id);//criptografa id
+	if($usuario->vagasPalestras()<=70){
+		$retorno = $usuario->salvar();
+		if($retorno['success']){
+			$retorno['idpdf']='usuario_'.encrypt($usuario->id);//criptografa id
+		}
+	}else{
+		$retorno['success']=false;
+		$retorno['erros']=array('Msg'=>'vagas esgotadas');
 	}
 }
 

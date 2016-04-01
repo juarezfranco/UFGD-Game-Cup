@@ -49,7 +49,7 @@ $(document).ready(function() {
 				pdf_link+= 'genpdf.php?pdf='+data['idpdf'];
 				var btnclose='<a href="#" class="close" data-dismiss="modal">&times;</a>';
 				var message ='<strong>Tudo certo!</strong> O cadastro foi efetuado com sucesso.';
-                var btnpdf  ='<a href="'+pdf_link+'" class="btn btn-success">Baixar Formulário</a>';
+                var btnpdf  ='<a href="'+pdf_link+'" target="_blank"  class="btn btn-success">Baixar Formulário</a>';
 				//prepara conteudo que será exibido no modal
 				$('#alertsuccess-content').html(btnclose+message+btnpdf);
 				//abre modal de mensagem de sucesso

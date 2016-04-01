@@ -33,6 +33,16 @@ class Usuario extends Model{
 		}
 	}
 
+	public function vagasPalestras(){
+		$sql = 'select count(id) as qtd from usuarios where equipe is null';
+
+		$query=$this->conn->prepare($sql);
+		if($query->execute()){
+			$row = $query->fetch(PDO::FETCH_ASSOC);
+			return $row['qtd'];
+		}
+	}
+
 	/**
 	* Salva no bd
 	*/

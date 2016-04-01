@@ -24,8 +24,8 @@
 			width: 30%;
 		}
 		.content{
-			margin-top: 20px;
-			margin-bottom: 15px;
+			margin-top: 15px;
+			margin-bottom: 10px;
 		}
 		hr{
 			border:1px dashed gray;
@@ -97,8 +97,9 @@
 
 		<section>
 			<div class="content">
-				<p><strong>Participação das palestras no dia 20/04/2016</strong></p>
+				<p><strong>- Participação das palestras no dia 20/04/2016</strong></p>
 				<p><strong>Valor:</strong> gratuito</p>
+				<p style="font-size:12px;">Obs.: Favor confirmar participação em até 5 dias úteis após a data de cadastro.</p>
 			</div>
 			<?php if($i==0) echo '<hr size="1">' ?>
 		</section>
@@ -126,7 +127,7 @@
 				<td>
 				</td>
 				<td>
-		    		<p align="center">Profº Mestre Fabio Mascarenhas</p>		
+		    		<p align="center"><span style="color:white;">___________</span>Responsável</p>		
 				</td>
 			</tr>
 		</table>

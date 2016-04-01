@@ -26,6 +26,16 @@ class Equipe extends Model{
 		$this->jogadores[] = $jogador;
 	}
 
+	public function vagasCampeonato(){
+		$sql = 'select count(id) as qtd from equipes';
+
+		$query=$this->conn->prepare($sql);
+		if($query->execute()){
+			$row = $query->fetch(PDO::FETCH_ASSOC);
+			return $row['qtd'];
+		}
+	}
+
 	public function read(){
 		$sql = 'SELECT * FROM '.self::TABLE_NAME.' WHERE id=:id ';
 

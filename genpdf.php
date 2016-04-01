@@ -13,22 +13,26 @@ if(!$idpdf){
 if(startsWith($idpdf,'usuario_')){
 	//recupera id do usuario
 	$id = substr($idpdf, strlen('usuario_'));
+
 	$usuario = new Usuario();
 	$usuario->id= decrypt($id);
 	//le dados do banco
 	$usuario->read();
-	echo $id;
-	echo decrypt($id);
 	ob_start();
 		include(__DIR__.'/resource/reports/FormularioOpcao1.php');
 		$html = ob_get_contents();
 	ob_end_clean();
 
-	$mpdf=new mPDF();
+	$name = str_replace('.', '', $usuario->cpf);
+	$name = str_replace('-', '', $name);
+	$filepath = 'resource/reports/gerados/cadastro1'.$name.'.pdf';
+	
+	$mpdf=new mPDF('A4');
 	$mpdf->WriteHTML($html);
-	$mpdf->Output();
-	exit();
+	$mpdf->Output($filepath ,'F');
+	header('location:/resource/reports/gerados/cadastro1'.urlencode($name).'.pdf');
 
+	exit();
 }
 
 //CRIA PDF DO FORMULÁRIO DA OPÇÃO 2
@@ -46,9 +50,17 @@ if(startsWith($idpdf,'equipe_')){
 		$html = ob_get_contents();
 	ob_end_clean();
 
-	$mpdf=new mPDF();
+	$name = $equipe->jogadores[0]->cpf;
+	$name = str_replace('.', '', $name);
+	$name = str_replace('-', '', $name);
+	$filepath = 'resource/reports/gerados/cadastro2'.$name.'.pdf';
+	//instancia gerador de pdf
+	$mpdf=new mPDF('A4');
 	$mpdf->WriteHTML($html);
-	$mpdf->Output();
+	//salva arquivo no caminho especificado $filepath
+	$mpdf->Output($filepath ,'F');$mpdf->Output();
+	//redireciona pagina para onde o arquivo foi salvo
+	header('location:/resource/reports/gerados/cadastro2'.urlencode($name).'.pdf');
 	exit();
 
 }

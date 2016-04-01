@@ -136,7 +136,7 @@
     <section id="inscricao" class="container content-section text-center">
         <div class="row">
             <h2>Inscrição</h2>
-            
+            <i> em breve será aberta ...</i>
             <div class="col-lg-10 col-lg-offset-2">
 
                 <div class="row">
@@ -271,6 +271,8 @@
 
     <?php 
         //inclui formulários de cadastro
+    echo 'pal'.$vagasPalestras;
+    echo 'camp'.$vagasCampeonato;
     if($vagasPalestras<=$totalPalestra)
         include 'view/form_cadopcao1.html';
     if($vagasCampeonato<=$totalCampeonato)
